@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  max-width: 375px;
+  margin: 20px auto;
+  background: #f5f5f5;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 100vh;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.login {
+  padding: 20px;
+  text-align: center;
+}
+
+.login__image img {
+  width: 120px;
+  margin: 20px 0;
+}
+
+.login__header h2 {
+  margin: 0;
+}
+
+.login__header p {
+  color: #888;
+  font-size: 14px;
+}
+
+.login__form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login__form input {
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+}
+
+.login__options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.forgot {
+  color: red;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #eee;
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(#444, #000);
+  color: #fff;
+  font-weight: 600;
+}
+
+.bottom-text {
+  font-size: 13px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+}
+
+.bottom-nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+/* 🔥 BADGE */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}

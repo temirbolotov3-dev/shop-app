@@ -11,3 +11,198 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.categories button.active {
+  background: #000;
+  color: #fff;
+}
+
+.app {
+  max-width: 375px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 100vh;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #111;
+}
+
+.app {
+  max-width: 375px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* LOGIN */
+.login {
+  padding: 20px;
+  text-align: center;
+}
+
+.login input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: black;
+  color: white;
+}
+/* ONBOARDING FULL FIX */
+.onboarding {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.onboarding__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.onboarding::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* CONTENT */
+.onboarding__content {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  z-index: 2;
+}
+
+.onboarding__content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.onboarding__content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.onboarding__content button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* HEADER */
+.home__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__top p {
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.home__top h3 {
+  margin: 0;
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+/* SEARCH */
+.search input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #eee;
+  margin: 12px 0;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.categories button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: #eee;
+  font-size: 16px;
+}
+
+.categories .active {
+  background: #000;
+  color: #fff;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* SKELETON */
+.skeleton {
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.home {
+  padding: 16px;
+  padding-top: env(safe-area-inset-top, 30px);
+   background: #f5f5f5;
+}

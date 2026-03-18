@@ -1,27 +1,37 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Onboarding() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+
+    if (user) {
+      navigate("/home");
+    }
+  }, [navigate]); // 🔥 МААНИЛҮҮ FIX
+
   return (
     <main className="onboarding">
-      <section className="onboarding__image">
-        <img
-          src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=800"
-          alt="fashion"
-        />
-      </section>
 
-      <section className="onboarding__content">
+      <img
+        src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53"
+        alt="fashion"
+        className="onboarding__img"
+      />
+
+      <div className="onboarding__content">
         <h1>Find Your Best Style</h1>
         <p>
           Join and discover the best style according to your passion
         </p>
 
-        <button onClick={() => navigate("/login")} className="btn">
+        <button onClick={() => navigate("/login")}>
           Get Started
         </button>
-      </section>
+      </div>
+
     </main>
   );
 }
