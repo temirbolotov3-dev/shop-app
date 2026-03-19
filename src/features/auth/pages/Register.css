@@ -8,9 +8,9 @@
 
 /* IMAGE */
 .top-image {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
+  width: 305px;
+  height: 305px;
+  margin-top: 100px;
 }
 
 /* FORM */
