@@ -1,0 +1,46 @@
+.onboarding {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.top-image {
+  width: 100%;     /* 🔥 ушуну өзгөрт */
+  max-width: 320px;
+  border-radius: 24px;
+  margin-top: 10px;
+}
+.text-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.text-card h2 {
+  margin-bottom: 10px;
+}
+
+.text-card p {
+  font-size: 14px;
+  color: gray;
+}
+
+.get-started {
+  width: 90%;
+  max-width: 300px;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #444, #000);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+}

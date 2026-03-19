@@ -1,0 +1,27 @@
+.tracking {
+  padding: 16px;
+}
+
+.track-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  color: gray;
+}
+
+.step.active {
+  color: green;
+  font-weight: bold;
+}

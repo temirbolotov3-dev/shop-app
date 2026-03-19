@@ -1,76 +1,56 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect } from "react";
-
+// pages
 import Onboarding from "../pages/Onboarding";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import Home from "../pages/Home";
-import Product from "../pages/Product";
-import Cart from "../pages/Cart";
 import NotFound from "../pages/NotFound";
 
-/* ===================== */
-/* ANIMATED ROUTES */
-/* ===================== */
+// auth
+import Login from "../features/auth/pages/Login";
+import Register from "../features/auth/pages/Register";
 
-function AnimatedRoutes() {
-  const location = useLocation();
+// home
+import Home from "../features/home/pages/Home";
 
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Page><Onboarding /></Page>} />
-        <Route path="/login" element={<Page><Login /></Page>} />
-        <Route path="/register" element={<Page><Register /></Page>} />
-        <Route path="/home" element={<Page><Home /></Page>} />
-        <Route path="/product/:id" element={<Page><Product /></Page>} />
-        <Route path="/cart" element={<Page><Cart /></Page>} />
-        <Route path="*" element={<Page><NotFound /></Page>} />
-      </Routes>
-    </AnimatePresence>
-  );
-}
+// product
+import ProductDetails from "../features/product/pages/ProductDetails";
 
-/* ===================== */
-/* PAGE WRAPPER */
-/* ===================== */
+// cart
+import Cart from "../features/cart/pages/Cart";
 
-function Page({ children }) {
+// checkout
+import Checkout from "../features/checkout/pages/Checkout";
 
-  // 🔥 scroll top fix
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+// order
+import Orders from "../features/order/pages/Orders";
+import OrderDetails from "../features/order/pages/OrderDetails";
+import Tracking from "../features/order/pages/Tracking";
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95, y: -20 }}
-      transition={{ duration: 0.25 }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+// wishlist
+import Wishlist from "../features/wishlist/pages/Wishlist";
 
-/* ===================== */
-/* MAIN ROUTER */
-/* ===================== */
-
-function AppRouter() {
+export default function AppRouter() {
   return (
     <BrowserRouter>
-      <AnimatedRoutes />
+      <Routes>
+        <Route path="/" element={<Onboarding />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        <Route path="/home" element={<Home />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/order/:id" element={<OrderDetails />} />
+        <Route path="/tracking/:id" element={<Tracking />} />
+
+        <Route path="/wishlist" element={<Wishlist />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }
-
-export default AppRouter;

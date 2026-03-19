@@ -1,13 +1,11 @@
 import AppRouter from "./routes/AppRouter";
-import CartProvider from "./context/CartContext";
+import "./App.css";
 
 function App() {
   return (
-    <CartProvider>
-  <div className="app">   {/* 🔥 МААНИЛҮҮ */}
-    <AppRouter />
-  </div>
-</CartProvider>
+    <div className="app">
+      <AppRouter />
+    </div>
   );
 }
 
